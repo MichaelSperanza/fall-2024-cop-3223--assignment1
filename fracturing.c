@@ -60,11 +60,12 @@ double calculateDistance()
 double calculatePerimeter()
 {
     // Calling the Distance function
-    double Distance = calculateDistance();
+    double distance;
+    distance = calculateDistance();
     double Perimeter;
 
     // Math
-    Perimeter = Distance * pi;
+    Perimeter = distance * pi;
 
     // Print perimeter and return difficulty
     double PDifficulty;
@@ -79,11 +80,12 @@ double calculatePerimeter()
 double calculateArea()
 {
     // Calling the Distance Function
-    double Distance = calculateDistance();
+    double distance;
+    distance = calculateDistance();
 
     // Math
     double radius;
-    radius = Distance / 2;
+    radius = distance / 2;
 
     double Area;
     Area = pi * pow(radius, 2);
