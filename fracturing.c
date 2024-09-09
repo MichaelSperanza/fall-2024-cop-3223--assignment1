@@ -1,4 +1,4 @@
-//*******************************
+// *******************************
 // fracturing.c
 // Author: Michael Speranza
 // Class: COP 3223, Professor Parra
@@ -6,7 +6,7 @@
 // Input: None
 //
 // Output: 
-// //******************************
+// ******************************
 
 //Header file
 
@@ -17,6 +17,7 @@
 // Distance Function
 double calculateDistance()
 {
+    static int notPrinted = 1;
     // Asking for user input
     double x1;
     double x2;
@@ -50,7 +51,10 @@ double calculateDistance()
     Distance = sqrt(Dsqrd);
 
     // Print and return distance
-    printf("The distance between the two points is %.3lf \n", Distance);
+    if (notPrinted == 1) {
+        printf("The distance between the two points is %.3lf \n", Distance);
+        notPrinted = 0;
+    }
 
     return Distance;
 
@@ -62,6 +66,7 @@ double calculatePerimeter()
     // Calling the Distance function
     double distance;
     distance = calculateDistance();
+
     double Perimeter;
 
     // Math
@@ -199,6 +204,7 @@ double askForUserInput()
 
 int main(int argc, char **argv)
 {
+    // static int notPrinted = 1;
     calculateDistance();
     calculatePerimeter();
     calculateArea();
